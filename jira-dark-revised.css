@@ -1,14 +1,11 @@
 /* ==UserStyle==
 @name           JIRA Dark revised
+@version        1.0.0
 @author         monkeypox8
+@namespace      userstyles.world/user/teenwolfblitzer
 @description    `JIRA dark theme based on JIRA Dark 2022 by autometrist`
 ==/UserStyle== */
 @-moz-document domain("atlassian.net"), regexp("(http(s)?:\\/\\/.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.atlassian{1}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)") {
-/* ==UserStyle==
-@name           JIRA Dark 2023
-@author         monkeypox8
-@description    `JIRA dark theme for 2023`
-==/UserStyle== */
 
 :root {
     --custom-bg-dark: white;
