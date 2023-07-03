@@ -7,115 +7,117 @@
 ==/UserStyle== */
 @-moz-document domain("atlassian.net"), regexp("(http(s)?:\\/\\/.)?(www\\.)?[-a-zA-Z0-9@:%._\\+~#=]{2,256}\\.atlassian{1}\\b([-a-zA-Z0-9@:%_\\+.~#?&//=]*)") {
 
-:root {
-    --custom-bg-dark: white;
-    --custom-bg-dark-transparent: #fcfcfcaa;
-    --custom-bg-dark-translucent: #eeec;
-    --ds-shadow-overlay: var(--custom-bg-dark);
-}
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --custom-bg-dark: white;
+            --custom-bg-dark-transparent: #fcfcfcaa;
+            --custom-bg-dark-translucent: #eeec;
+            --ds-shadow-overlay: var(--custom-bg-dark);
+        }
 
-html {
-    filter: invert(89%) hue-rotate(175deg) brightness(106%) contrast(99%);
-    background: var(--custom-bg-dark) !important; /* required to apply invert filters */
-}
-span[role="img"],
-span[data-testid="issue-comment-base.ui.comment.54449.avatar--image"],
-.css-ob4lje,
-img,
-svg,
-iframe,
-.emoji-common-emoji-sprite {
-    filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
-}
-/* Fix bug with white edges on sprint board */
-#gh {
-    padding: 0 40px;
-}
-#content {
-    margin: 0;
-}
-/* Fix scroll background problems */
-[data-testid="Content"] > div:first-child {
-    background: var(--custom-bg-dark);
-}
-#ak-jira-navigation > header[role=banner],
-#ak-jira-navigation > header[role=banner] > nav,
-#ak-jira-navigation > header[role=banner] > nav > div,
-#ak-jira-navigation > header[role=banner] > nav > div > div,
-#ak-jira-navigation > header[role=banner] > nav > div > div > div {
-    background: transparent !important;
-}
+        html {
+            filter: invert(89%) hue-rotate(175deg) brightness(106%) contrast(99%);
+            background: var(--custom-bg-dark) !important; /* required to apply invert filters */
+        }
+        span[role="img"],
+        span[data-testid="issue-comment-base.ui.comment.54449.avatar--image"],
+        .css-ob4lje,
+        img,
+        svg,
+        iframe,
+        .emoji-common-emoji-sprite {
+            filter: invert(100%) hue-rotate(180deg) brightness(105%) contrast(105%);
+        }
+        /* Fix bug with white edges on sprint board */
+        #gh {
+            padding: 0 40px;
+        }
+        #content {
+            margin: 0;
+        }
+        /* Fix scroll background problems */
+        [data-testid="Content"] > div:first-child {
+            background: var(--custom-bg-dark);
+        }
+        #ak-jira-navigation > header[role=banner],
+        #ak-jira-navigation > header[role=banner] > nav,
+        #ak-jira-navigation > header[role=banner] > nav > div,
+        #ak-jira-navigation > header[role=banner] > nav > div > div,
+        #ak-jira-navigation > header[role=banner] > nav > div > div > div {
+            background: transparent !important;
+        }
 
-/* logo */
-.css-1a9cp86:first-of-type {
-    background: #aaa;
-}
+        /* logo */
+        .css-1a9cp86:first-of-type {
+            background: #aaa;
+        }
 
-/* search bar */
-[data-test-id="search-dialog-input"] {
-    background: var(--custom-bg-dark) ;
-    color: var(--fbc-primary-text, black);
-    border: 1px solid #ddd;
-}
+        /* search bar */
+        [data-test-id="search-dialog-input"] {
+            background: var(--custom-bg-dark) ;
+            color: var(--fbc-primary-text, black);
+            border: 1px solid #ddd;
+        }
 
-[data-test-id="search-dialog-input"]::placeholder {
-    color: var(--fbc-primary-text, black);
-}
+        [data-test-id="search-dialog-input"]::placeholder {
+            color: var(--fbc-primary-text, black);
+        }
 
-#ak-jira-navigation nav[aria-label=Primary] ~ div:focus-within [data-test-id="search-dialog-input"] {
-    box-shadow: 0 0 0 1px #eeea, 0 2px 1px #eeec, 0 0 20px -6px #eeef;
-}
+        #ak-jira-navigation nav[aria-label=Primary] ~ div:focus-within [data-test-id="search-dialog-input"] {
+            box-shadow: 0 0 0 1px #eeea, 0 2px 1px #eeec, 0 0 20px -6px #eeef;
+        }
 
-/* main nav links */
-#ak-jira-navigation [aria-haspopup="true"][type="button"],
-#ak-jira-navigation .cyMuoM,
-#ak-jira-navigation [aria-haspopup="true"][type="button"]:hover,
-#ak-jira-navigation [aria-haspopup="true"][type="button"]:active,
-#ak-jira-navigation [aria-haspopup="true"][type="button"]:focus,
-#ak-jira-navigation [aria-haspopup="true"][type="button"]:visited,
-#ak-jira-navigation [aria-haspopup="true"][type="button"]:disabled,
-#ak-jira-navigation [aria-haspopup="true"][type="button"][disabled] {
-    background: transparent;
-    color: var(--fbc-primary-text, black);
-}
+        /* main nav links */
+        #ak-jira-navigation [aria-haspopup="true"][type="button"],
+        #ak-jira-navigation .cyMuoM,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"]:hover,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"]:active,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"]:focus,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"]:visited,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"]:disabled,
+        #ak-jira-navigation [aria-haspopup="true"][type="button"][disabled] {
+            background: transparent;
+            color: var(--fbc-primary-text, black);
+        }
 
-/* main nav notification buttons */
-#ak-jira-navigation [data-test-id="ak-spotlight-target-help-spotlight"] [type="button"],
-#ak-jira-navigation .css-zuyx2p {
-    background: #ddd;
-}
+        /* main nav notification buttons */
+        #ak-jira-navigation [data-test-id="ak-spotlight-target-help-spotlight"] [type="button"],
+        #ak-jira-navigation .css-zuyx2p {
+            background: #ddd;
+        }
 
-#ak-jira-navigation [aria-label=Primary] .css-zuyx2p {
-    background: #eee;
-}
+        #ak-jira-navigation [aria-label=Primary] .css-zuyx2p {
+            background: #eee;
+        }
 
 
-/* board overflow */
-[data-onboarding-observer-id="board-wrapper"] section > div:first-child {
-    box-shadow: 0 80px 0 var(--custom-bg-dark), 5px -2px 7px var(--custom-bg-dark);
-}
+        /* board overflow */
+        [data-onboarding-observer-id="board-wrapper"] section > div:first-child {
+            box-shadow: 0 80px 0 var(--custom-bg-dark), 5px -2px 7px var(--custom-bg-dark);
+        }
 
-[data-onboarding-observer-id="board-wrapper"] section > div:last-child {
-    box-shadow: 0 80px 0 var(--custom-bg-dark), -5px -2px 7px var(--custom-bg-dark);
-}
+        [data-onboarding-observer-id="board-wrapper"] section > div:last-child {
+            box-shadow: 0 80px 0 var(--custom-bg-dark), -5px -2px 7px var(--custom-bg-dark);
+        }
 
-/* board minimap */
-[data-testid="layout-controller.ui.bottom-right-corner.container.styled-container"] > div > div > div {
-    box-shadow: 4px 8px 14px 0 var(--custom-bg-dark);
-}
+        /* board minimap */
+        [data-testid="layout-controller.ui.bottom-right-corner.container.styled-container"] > div > div > div {
+            box-shadow: 4px 8px 14px 0 var(--custom-bg-dark);
+        }
 
-/* modals */
-.atlaskit-portal-container .atlaskit-portal > [aria-hidden=false] > [data-focus-lock-disabled="false"] > div[role=presentation] section {
-    box-shadow: 0 0 0 1px #dddd, 0 2px 1px #ddde, 0 0 20px -6px #dddf;
-}
+        /* modals */
+        .atlaskit-portal-container .atlaskit-portal > [aria-hidden=false] > [data-focus-lock-disabled="false"] > div[role=presentation] section {
+            box-shadow: 0 0 0 1px #dddd, 0 2px 1px #ddde, 0 0 20px -6px #dddf;
+        }
 
-/* modal backdrop */
-.atlaskit-portal-container .atlaskit-portal > [aria-hidden=false] > [data-focus-lock-disabled="false"] > div[role=presentation] {
-    background-color: var(--custom-bg-dark-translucent);
-}
+        /* modal backdrop */
+        .atlaskit-portal-container .atlaskit-portal > [aria-hidden=false] > [data-focus-lock-disabled="false"] > div[role=presentation] {
+            background-color: var(--custom-bg-dark-translucent);
+        }
 
-/* modal menus */
-.atlaskit-portal-container .atlaskit-portal > [data-placement="bottom-end"] {
-    box-shadow: 0 0 0 1px #eeea, 0 2px 1px #eeec, 0 0 20px -6px #eeef;
-}
+        /* modal menus */
+        .atlaskit-portal-container .atlaskit-portal > [data-placement="bottom-end"] {
+            box-shadow: 0 0 0 1px #eeea, 0 2px 1px #eeec, 0 0 20px -6px #eeef;
+        }
+    }
 }
